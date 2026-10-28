@@ -19,10 +19,10 @@
     lazygit
     nil
     nixfmt
-    wslu # wslview: open links in the Windows browser
   ];
 
-  home.sessionVariables.BROWSER = "wslview";
+  # WSL interop: hand URLs to the default Windows browser.
+  home.sessionVariables.BROWSER = "explorer.exe";
 
   programs.git = {
     enable = true;

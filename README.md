@@ -14,7 +14,7 @@ My shell and dev environment as a [home-manager](https://github.com/nix-communit
 | Dev shells | direnv + nix-direnv, pairs with [nix-devshells](https://github.com/Urthella/nix-devshells) |
 | CLI | ripgrep, fd, bat, eza, jq, yq, just, htop |
 | Nix | nil (LSP), nixfmt |
-| WSL | `wslview` as `$BROWSER`, so links open in Windows |
+| WSL | `explorer.exe` as `$BROWSER`, so links open in the Windows browser |
 
 ## Install
 
