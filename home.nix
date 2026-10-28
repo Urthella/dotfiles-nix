@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  home.username = "utku";
-  home.homeDirectory = "/home/utku";
   home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;

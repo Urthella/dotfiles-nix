@@ -25,7 +25,17 @@ git clone https://github.com/Urthella/dotfiles-nix ~/dotfiles-nix
 nix run home-manager/master -- switch --flake ~/dotfiles-nix#utku
 ```
 
-After that, `hms` re-applies changes. On a different username, edit `home.username` and `home.homeDirectory` in [home.nix](home.nix).
+After that, `hms` re-applies changes. On a different username, edit `home.username` and `home.homeDirectory` in [flake.nix](flake.nix).
+
+### As a NixOS module
+
+The config is also exported as `homeModules.default`, without a hardcoded user, so a NixOS flake can attach it to any account:
+
+```nix
+home-manager.users.utku = inputs.dotfiles.homeModules.default;
+```
+
+[nixos-wsl-dev](https://github.com/Urthella/nixos-wsl-dev) uses it this way.
 
 ## CI
 
